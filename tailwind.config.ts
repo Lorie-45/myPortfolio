@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss";
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./pages/**/*.{ts,tsx,js,jsx}",
+		"./components/**/*.{ts,tsx,js,jsx}",
+		"./app/**/*.{ts,tsx,js,jsx}",
+		"./src/**/*.{ts,tsx,js,jsx}",
 	],
 	prefix: "",
 	theme: {
@@ -61,7 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                portfolio: {
+                    primary: '#3B82F6',       // Blue
+                    secondary: '#6D28D9',     // Purple
+                    accent: '#10B981',        // Green
+                    light: '#F3F4F6',
+                    dark: '#1F2937',
+                    text: '#4B5563',
+                    highlight: '#EF4444',     // Red for highlights
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

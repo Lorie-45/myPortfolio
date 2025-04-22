@@ -1,73 +1,108 @@
-# Welcome to your Lovable project
+# Portfolio Website
 
-## Project info
+A clean and attractive portfolio website built with modern technologies. This project includes a responsive frontend built with React and Tailwind CSS and a backend API with Express, Node.js, and MongoDB.
 
-**URL**: https://lovable.dev/projects/c7495a06-80e3-4faa-af4e-f1132e10ef67
+## Features
 
-## How can I edit this code?
+- **Responsive Design**: Looks great on all device sizes
+- **Modern UI**: Clean and attractive interface with smooth animations
+- **Portfolio Showcase**: Display your projects in an organized manner
+- **Contact Form**: Allow visitors to send you messages
+- **API Integration**: Backend API to manage projects and contact submissions
+- **MongoDB Integration**: Store data persistently in MongoDB
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+### Frontend
+- React.js
+- Tailwind CSS
+- CSS Animations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c7495a06-80e3-4faa-af4e-f1132e10ef67) and start prompting.
+### Backend
+- Node.js
+- Express.js
+- MongoDB
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Structure
 
-**Use your preferred IDE**
+```
+├── public/             # Static assets
+├── server/             # Backend server
+│   ├── models/         # MongoDB models
+│   ├── routes/         # API routes
+│   └── server.js       # Express server setup
+├── src/                # Frontend source code
+│   ├── components/     # React components
+│   │   ├── common/     # Common/shared components
+│   │   ├── layout/     # Layout components
+│   │   └── sections/   # Main page sections
+│   ├── pages/          # App pages
+│   ├── App.jsx         # Main app component
+│   └── index.jsx       # Entry point
+└── README.md           # Project documentation
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- Node.js (v14+)
+- npm or yarn
+- MongoDB (local or Atlas)
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository
+```
+git clone https://github.com/yourusername/portfolio-website.git
+cd portfolio-website
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install frontend dependencies
+```
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Install backend dependencies
+```
+cd server
+npm install
+cd ..
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Create a `.env` file in the server directory with:
+```
+MONGODB_URI=your_mongodb_connection_string
+PORT=5000
+NODE_ENV=development
+```
+
+5. Start the backend server
+```
+cd server
+npm start
+```
+
+6. In a new terminal, start the frontend development server
+```
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+7. Open your browser and navigate to `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deployment
 
-**Use GitHub Codespaces**
+### Frontend
+The frontend can be built for production using:
+```
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Backend
+The backend is set up to serve the frontend in production. Set `NODE_ENV=production` in your environment variables.
 
-## What technologies are used for this project?
+## License
+MIT
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c7495a06-80e3-4faa-af4e-f1132e10ef67) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Acknowledgements
+- All images used are from [Unsplash](https://unsplash.com/)
+- Icons provided by SVG

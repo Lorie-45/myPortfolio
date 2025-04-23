@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
@@ -63,7 +64,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-portfolio-primary to-portfolio-secondary rounded-full blur opacity-75"></div>
             <img 
-              src="https://images.unsplash.com/photo-1599566150163-29194dcaad36" 
+              src="/lovable-uploads/5f6d647c-5868-4b99-a82a-a979921beda5.png"
               alt="Developer Profile" 
               className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-white shadow-xl"
             />

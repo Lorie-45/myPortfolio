@@ -160,7 +160,7 @@ const Portfolio = () => {
                       ))}
                     </div>
                     <div className="flex space-x-3">
-                      {/* Replace view code with view design for design category, remove live demo */}
+                      {/* For design category, show View Design (Figma), else View Code (GitHub) */}
                       {project.category === "design" && project.figmaLink ? (
                         <a
                           href={project.figmaLink}

@@ -111,7 +111,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Location',
-      content: '123 Web Dev Lane, Internet City, 10010',
+      content: 'Kacyiru, Rwanda',
     },
     {
       icon: (
@@ -120,7 +120,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Email',
-      content: 'contact@myportfolio.com',
+      content: 'ishimwelorie45@gmail.com',
     },
     {
       icon: (
@@ -129,7 +129,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Phone',
-      content: '+1 (123) 456-7890',
+      content: '+250 793 093 879',
     },
   ];
 

@@ -27,11 +27,11 @@ A clean and attractive portfolio website built with modern technologies. This pr
 
 ```
 ├── public/             # Static assets
-├── server/             # Backend server
+├── backend/            # Backend server
 │   ├── models/         # MongoDB models
 │   ├── routes/         # API routes
 │   └── server.js       # Express server setup
-├── src/                # Frontend source code
+├── frontend/           # Frontend source code
 │   ├── components/     # React components
 │   │   ├── common/     # Common/shared components
 │   │   ├── layout/     # Layout components
@@ -59,17 +59,19 @@ cd portfolio-website
 
 2. Install frontend dependencies
 ```
-npm install
-```
-
-3. Install backend dependencies
-```
-cd server
+cd frontend
 npm install
 cd ..
 ```
 
-4. Create a `.env` file in the server directory with:
+3. Install backend dependencies
+```
+cd backend
+npm install
+cd ..
+```
+
+4. Create a `.env` file in the backend directory with:
 ```
 MONGODB_URI=your_mongodb_connection_string
 PORT=5000
@@ -78,12 +80,13 @@ NODE_ENV=development
 
 5. Start the backend server
 ```
-cd server
+cd backend
 npm start
 ```
 
 6. In a new terminal, start the frontend development server
 ```
+cd frontend
 npm run dev
 ```
 

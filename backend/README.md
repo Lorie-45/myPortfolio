@@ -3,12 +3,13 @@
 
 This is the backend API for the portfolio website. It provides APIs for managing projects and contact form submissions.
 
-## Features
+## Project Structure
 
-- RESTful API structure
-- MongoDB integration
-- Contact form submission handling
-- Project management
+```
+├── models/         # MongoDB models
+├── routes/         # API routes
+└── server.js       # Express server setup
+```
 
 ## API Endpoints
 
@@ -47,4 +48,5 @@ npm start
 4. For development with auto-reload:
 ```
 npm run dev
+```
 ```

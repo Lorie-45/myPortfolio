@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 
 const About = () => {
@@ -130,7 +129,7 @@ const About = () => {
             </div>
           </div>
           
-          {/* Right Column - Skills & Experience */}
+          {/* Right Column - Skills only, Work Experience removed */}
           <div>
             {/* Skills */}
             <div className={`mb-12 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
@@ -152,24 +151,7 @@ const About = () => {
                 ))}
               </div>
             </div>
-            
-            {/* Experience */}
-            <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-              <h3 className="text-2xl font-semibold mb-6 text-portfolio-dark">Work Experience</h3>
-              <div className="space-y-6">
-                {experience.map((exp, index) => (
-                  <div key={index} className="relative pl-6 border-l-2 border-portfolio-primary pb-6 last:pb-0">
-                    <div className="absolute left-[-8px] top-0 w-3.5 h-3.5 bg-white border-2 border-portfolio-primary rounded-full"></div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-portfolio-dark">{exp.title}</h4>
-                      <p className="text-portfolio-primary font-medium">{exp.company}</p>
-                      <p className="text-sm text-gray-500 mb-2">{exp.period}</p>
-                      <p className="text-portfolio-text">{exp.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Work Experience REMOVED */}
           </div>
         </div>
       </div>

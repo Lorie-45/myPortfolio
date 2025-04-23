@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 
 const Portfolio = () => {
@@ -86,17 +85,16 @@ const Portfolio = () => {
       codeLink: 'https://github.com/yourusername/fitness-tracker',
       description: 'An app for tracking workouts and visualizing fitness progress with interactive charts.',
     },
-    // Example design project (add your own codeLink):
-    // {
-    //   id: 7,
-    //   title: 'Brand Identity Design',
-    //   category: 'design',
-    //   image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-    //   tags: ['Figma', 'Branding'],
-    //   demoLink: '#',
-    //   codeLink: 'https://github.com/yourusername/brand-identity-design',
-    //   description: 'Complete corporate branding including logo, style guide, and collateral pieces.',
-    // },
+    {
+      id: 7,
+      title: 'Brand Identity Design',
+      category: 'design',
+      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+      tags: ['Figma', 'Branding'],
+      demoLink: '#',
+      figmaLink: 'https://www.figma.com/file/example-design', // Example Figma link
+      description: 'Complete corporate branding including logo, style guide, and collateral pieces.',
+    },
   ];
 
   const filteredProjects =
@@ -161,15 +159,30 @@ const Portfolio = () => {
                       ))}
                     </div>
                     <div className="flex space-x-3">
-                      {/* Only show View Code (remove Live Demo) */}
-                      <a
-                        href={project.codeLink}
-                        className="text-white bg-portfolio-dark/80 hover:bg-portfolio-dark px-3 py-1 rounded text-sm"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View Code
-                      </a>
+                      {/* Only show relevant button per category */}
+                      {project.category === "design" && project.figmaLink ? (
+                        <a
+                          href={project.figmaLink}
+                          className="text-white bg-portfolio-dark/80 hover:bg-portfolio-dark px-3 py-1 rounded text-sm flex items-center gap-1"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {/* Figma Icon */}
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#fff"/><rect x="7" y="2" width="10" height="6" rx="3" fill="#1abcfe"/><rect x="7" y="8" width="10" height="6" rx="3" fill="#0acf83"/><rect x="7" y="14" width="4" height="6" rx="2" fill="#ff7262"/><rect x="11" y="14" width="6" height="6" rx="3" fill="#f24e1e"/></svg>
+                          View Design
+                        </a>
+                      ) : (
+                        <a
+                          href={project.codeLink}
+                          className="text-white bg-portfolio-dark/80 hover:bg-portfolio-dark px-3 py-1 rounded text-sm flex items-center gap-1"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {/* External Link Icon */}
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none"><path d="M14 3H21V10" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M10 14L21 3" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M21 21H3V3H10" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                          View Code
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

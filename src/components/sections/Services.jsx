@@ -75,8 +75,8 @@ const Services = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      title: 'Performance Optimization',
-      description: 'Improving your website or app performance through code optimization, caching strategies, and best practices.',
+      title: 'Graphic Design',
+      description: 'Experienced in branding, layout design, and illustration, with a strong focus on clean aesthetics and user engagement.',
     },
   ];
 

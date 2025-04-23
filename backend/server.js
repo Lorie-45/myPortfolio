@@ -16,7 +16,7 @@ dotenv.config();
 const app = express();
 
 // Set port
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 // Middleware
 app.use(cors());
@@ -39,10 +39,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('MongoDB connected successfully');
     // Start server

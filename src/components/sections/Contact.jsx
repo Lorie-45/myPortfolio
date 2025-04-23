@@ -317,29 +317,6 @@ const Contact = () => {
                 </div>
               </div>
               
-              {/* Google Map or Availability */}
-              <div className="bg-white rounded-lg shadow-md p-8 flex-1">
-                <h3 className="text-2xl font-semibold mb-6 text-portfolio-dark">Working Hours</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center pb-2 border-b border-gray-100">
-                    <span className="text-portfolio-text">Monday - Friday</span>
-                    <span className="font-medium text-portfolio-dark">9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-2 border-b border-gray-100">
-                    <span className="text-portfolio-text">Saturday</span>
-                    <span className="font-medium text-portfolio-dark">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-portfolio-text">Sunday</span>
-                    <span className="font-medium text-portfolio-dark">Closed</span>
-                  </div>
-                </div>
-                <div className="mt-6 p-4 bg-blue-50 rounded-md">
-                  <p className="text-portfolio-text">
-                    I'm currently <span className="text-portfolio-accent font-semibold">available</span> for freelance work or full-time positions.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

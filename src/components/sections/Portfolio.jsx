@@ -92,7 +92,8 @@ const Portfolio = () => {
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
       tags: ['Figma', 'Branding'],
       demoLink: '#',
-      figmaLink: 'https://www.figma.com/file/example-design', // Example Figma link
+      // Use a sample Figma link for demonstration
+      figmaLink: 'https://www.figma.com/file/example-design', 
       description: 'Complete corporate branding including logo, style guide, and collateral pieces.',
     },
   ];
@@ -159,7 +160,7 @@ const Portfolio = () => {
                       ))}
                     </div>
                     <div className="flex space-x-3">
-                      {/* Only show relevant button per category */}
+                      {/* Replace view code with view design for design category, remove live demo */}
                       {project.category === "design" && project.figmaLink ? (
                         <a
                           href={project.figmaLink}
@@ -187,7 +188,6 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-
               {/* Project Info (visible by default) */}
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-semibold text-portfolio-dark mb-2">{project.title}</h3>

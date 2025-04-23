@@ -1,27 +1,28 @@
+
 import { useEffect, useState } from 'react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById('about');
       if (!section) return;
-      
+
       const sectionTop = section.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
-      
+
       if (sectionTop < windowHeight * 0.75) {
         setIsVisible(true);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check on initial load
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   // Skills data
   const skills = [
     { name: 'HTML/CSS', percentage: 95 },
@@ -34,28 +35,6 @@ const About = () => {
     { name: 'Git/GitHub', percentage: 85 },
   ];
 
-  // Experience data
-  const experience = [
-    {
-      title: 'Senior Web Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2021 - Present',
-      description: 'Led development of multiple web applications using React, Node.js, and MongoDB. Improved site performance by 40% through code optimization.',
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'Digital Innovations',
-      period: '2019 - 2021',
-      description: 'Developed responsive web applications. Implemented RESTful APIs and database solutions using Express and MongoDB.',
-    },
-    {
-      title: 'Junior Frontend Developer',
-      company: 'WebCraft Studios',
-      period: '2018 - 2019',
-      description: 'Created responsive UI components using HTML, CSS, and JavaScript. Collaborated with design team to implement visual elements.',
-    },
-  ];
-
   return (
     <section id="about" className="section-padding bg-white">
       <div className="container mx-auto">
@@ -65,7 +44,6 @@ const About = () => {
             Get to know more about me, my experience, and my skills as a full stack developer.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Bio */}
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
@@ -85,7 +63,7 @@ const About = () => {
                 to open source, or enjoying outdoor activities.
               </p>
             </div>
-            
+
             {/* Personal Info */}
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -113,7 +91,6 @@ const About = () => {
                 </p>
               </div>
             </div>
-            
             {/* CTA Button */}
             <div className="mt-8">
               <a 
@@ -129,7 +106,7 @@ const About = () => {
             </div>
           </div>
           
-          {/* Right Column - Skills only, Work Experience removed */}
+          {/* Right Column - Only Skills, work experience removed */}
           <div>
             {/* Skills */}
             <div className={`mb-12 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
@@ -160,3 +137,4 @@ const About = () => {
 };
 
 export default About;
+
